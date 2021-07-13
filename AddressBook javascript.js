@@ -1,6 +1,6 @@
 /* @Description -To create contact class inside class we have create properties and create constructor.
  * Inside the constructor as a parameter passing the instance variable
- *for the initializing the instances set value with the possition */
+ *for the initializing the instances set value with the possition **/
 
 const prompt = require('prompt-sync')();
 class Contact {
