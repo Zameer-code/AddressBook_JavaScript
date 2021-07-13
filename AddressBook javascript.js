@@ -245,10 +245,3 @@ else if (type == 3) {
     let l_Name = prompt("Enter the Last Name:  ")
     deleteContact(f_Name, l_Name)
 }
-else if ( type == 4) {
-    function count(counter){
-        return counter + 1;
-    }
-    console.log("Total Number of Contacts: " + addressBookArray.reduce(count, 0))
-    
-}
