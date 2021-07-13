@@ -210,45 +210,8 @@ function findContact(fname, lname){
         }
     }
 }    
-
-/* slice method are used to delete contact by using person name  
-* Find Number of Cotacts in Address Book
-*/
-
-function deleteContact(fname, lname){
-    let contactToDelete;
-    for(let i = 0; i < addressBookArray.length; i++){
-        if(addressBookArray[i].firstName === fname && addressBookArray[i].lastName === lname)
-            contactToDelete = addressBookArray[i]
-    }
-    if(contactToDelete == null) {
-        console.log("No Such Contact Exist in Address Book")
-    }
-    else {
-        addressBookArray.pop(contactToDelete)
-        console.log(addressBookArray.toString())
-    }
-}
-
-console.log("---Type---\n1 to view the contact.\n2 to edit a contact\n3 to delete a contact\n4 to count the number of contacts")
-
-let type = prompt("Enter your choice: ")
-if (type == 1) {
-    console.log(addressBookArray.toString())
-}
-else if (type == 2) {
-
-    findContact(f_Name, l_Name);
-}
-else if (type == 3) {
-    let f_Name = prompt("Enter the First Name:  ")
-    let l_Name = prompt("Enter the Last Name:  ")
-    deleteContact(f_Name, l_Name)
-}
-else if ( type == 4) {
-    function count(counter){
-        return counter + 1;
-    }
-    console.log("Total Number of Contacts: " + addressBookArray.reduce(count, 0))
-    
-}
+console.log("\nTo Edit the Contacts")
+let f_Name = prompt("Enter the First Name:  ")
+let l_Name = prompt("Enter the Last Name:  ")
+findContact(f_Name, l_Name);
+console.log(addressBookArray.toString())
